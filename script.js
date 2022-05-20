@@ -1,9 +1,4 @@
 
-function loadQuote(){
-    getRequest();
-}
-
-
 function getRequest() {
     const xhttp = new XMLHttpRequest();
     xhttp.onload = function(){
@@ -11,5 +6,5 @@ function getRequest() {
     };
     xhttp.open('GET', "api.php", true);
     xhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-    xhttp.send(request);
+    xhttp.send();
 }

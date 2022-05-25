@@ -2,8 +2,10 @@ let test= "test";
 function getRequest() {
     const xhttp = new XMLHttpRequest();
     xhttp.onload = function(){
-        test=(this.responseText);
-        console.log(test);
+        let response = JSON.parse(this.responseText);
+        let quoteBody = document.getElementById('quote');
+        quoteBody.innerHTML = response['quote'];
+        console.log(response);
     };
     xhttp.open('GET', "api.php", true);
     xhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');

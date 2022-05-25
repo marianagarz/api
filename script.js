@@ -11,6 +11,3 @@ function getRequest() {
     xhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
     xhttp.send();
 }
-
-const obj= JSON.parse(test);
-document.getElementById("quote").innerHTML=obj.quote;
